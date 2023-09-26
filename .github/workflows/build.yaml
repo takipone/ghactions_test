@@ -11,6 +11,6 @@ jobs:
        run : |
          touch .env
          echo KEY= <<< EOS
-         ${{ variables.multiple_rows }}
+         ${{ vars.multiple_rows }}
          EOS >> .env
          cat .env
