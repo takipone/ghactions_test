@@ -10,7 +10,7 @@ jobs:
      - name: Build
        run : |
          touch .env
-         echo << EOS >> .env
+         echo "test='<< EOS'" >> .env
          ${{ vars.multiple_rows }}
          EOS
          cat .env
