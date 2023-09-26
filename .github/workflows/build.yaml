@@ -3,13 +3,14 @@ on:
   push:
     branches:
       - main
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-       - name: Build
-         run : |
-           touch .env
-           echo KEY= <<< EOS
-           ${{ variables.multiple_rows }}
-           EOS >> .env
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Build
+       run : |
+         touch .env
+         echo KEY= <<< EOS
+         ${{ variables.multiple_rows }}
+         EOS >> .env
+         cat .env
